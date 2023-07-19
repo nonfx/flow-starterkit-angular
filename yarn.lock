@@ -1175,7 +1175,14 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@cldcvr/flow-core@*", "@cldcvr/flow-core@latest":
+"@cldcvr/flow-core-config@1.0.0", "@cldcvr/flow-core-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-core-config/-/flow-core-config-1.0.0.tgz#954689eef14fa8f4e53e25a0226740ae7cd458be"
+  integrity sha512-kZzem2b1FQEf3Bnf2Uwm5OzY0RqHn5R4oDs7dPsUWpBFK8QTuFPbymQIqtoFhq3DjbMMNbMF1FK0BjHjlW5ukA==
+  dependencies:
+    rxjs "^7.5.7"
+
+"@cldcvr/flow-core@*":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@cldcvr/flow-core/-/flow-core-1.1.0.tgz#e117fd94acbf38d8b9e0e64424c82a611caff78f"
   integrity sha512-wGG/CumltDeK2h/gNzVc3GPsTWEOLAFEAu9/COCUDesrfLq7gRl2IP0WGh+vfEBQQGvMAAsAEwrODq6NN4CCHg==
@@ -1185,6 +1192,29 @@
     lit "^2.2.4"
     rxjs "^7.5.7"
 
+"@cldcvr/flow-core@1.17.6":
+  version "1.17.6"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-core/-/flow-core-1.17.6.tgz#60c4f6aa4976821eabefaab662d6c41ae1106e8d"
+  integrity sha512-OmQqSjwilqObRR20goGeNqLxQiBd21rHp0G4hGj3Kkvg6NlktX4TIrH/QUNscUTf9H4Dd9ZkihOfM0e1N3GRwQ==
+  dependencies:
+    "@cldcvr/flow-core-config" "1.0.0"
+    "@emoji-mart/data" "^1.1.2"
+    "@floating-ui/dom" "^1.0.2"
+    axios "^0.27.2"
+    emoji-mart "^5.5.2"
+    flatpickr "^4.6.13"
+    lit "^2.2.4"
+    rxjs "^7.5.7"
+    validate-color "^2.2.1"
+
+"@cldcvr/flow-md-editor@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-md-editor/-/flow-md-editor-0.0.2.tgz#e300381e94b7d941fcf345979ae9697174fd2467"
+  integrity sha512-VkEiwvEaVnox00cbQRuKKSeuV81zfNAWRX3FyfxdNoJ7VcqfWtDYWZh4Q15Njw9WW+VvD18FkDDViDoYATiVuQ==
+  dependencies:
+    lit "^2.2.4"
+    showdown "^2.1.0"
+
 "@cldcvr/flow-product-icon@latest":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@cldcvr/flow-product-icon/-/flow-product-icon-1.0.1.tgz#d067c26a32f75e88bd3941f930ca0bb90468f61b"
@@ -1192,12 +1222,12 @@
   dependencies:
     "@cldcvr/flow-core" "*"
 
-"@cldcvr/flow-system-icon@latest":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@cldcvr/flow-system-icon/-/flow-system-icon-1.0.0.tgz#0deec668b328fba9700d83bd44cd288330de6f19"
-  integrity sha512-j/tVwdxJU8VAhb/bOpuG0Id+frr9SqzR7YhNiqPFkPk6g4r2v97E3UVZaQUkQruXKfzgPo09y22VwwnDHgOOIQ==
+"@cldcvr/flow-system-icon@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-system-icon/-/flow-system-icon-1.9.0.tgz#133547aac9e2e8344d703680e312d4a7aadc3f9f"
+  integrity sha512-zCJczsE2CdOHSU674pK8/bR77aHsL55hMgIW6Uo2pswOdNwE15pjf5ruvPB/sBJaFFE3pN6WSTJIZGgr0xBt2A==
   dependencies:
-    "@cldcvr/flow-core" "*"
+    "@cldcvr/flow-core-config" "^1.0.0"
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -1314,6 +1344,11 @@
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
+
+"@emoji-mart/data@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@emoji-mart/data/-/data-1.1.2.tgz#777c976f8f143df47cbb23a7077c9ca9fe5fc513"
+  integrity sha512-1HP8BxD2azjqWJvxIaWAMyTySeZY0Osr83ukYjltPVkNXeJvTz7yDrPLBtnrD5uqJ3tg4CcLuuBW09wahqL/fg==
 
 "@esbuild/linux-loong64@0.15.5":
   version "0.15.5"
@@ -2425,6 +2460,11 @@ commander@^2.20.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
+commander@^9.0.0:
+  version "9.5.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-9.5.0.tgz#bc08d1eb5cedf7ccb797a96199d41c7bc3e60d30"
+  integrity sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==
+
 commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
@@ -2795,6 +2835,11 @@ electron-to-chromium@^1.4.251:
   version "1.4.284"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.284.tgz#61046d1e4cab3a25238f6bf7413795270f125592"
   integrity sha512-M8WEXFuKXMYMVr45fo8mq0wUrrJHheiKZf6BArTKk9ZBYCKJEOU5H8cdWgDT+qCVZf7Na4lVUaZsA+h6uA9+PA==
+
+emoji-mart@^5.5.2:
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/emoji-mart/-/emoji-mart-5.5.2.tgz#3ddbaf053139cf4aa217650078bc1c50ca8381af"
+  integrity sha512-Sqc/nso4cjxhOwWJsp9xkVm8OF5c+mJLZJFoFfzRuKO+yWiN7K8c96xmtughYb0d/fZ8UC6cLIQ/p4BR6Pv3/A==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -3245,6 +3290,11 @@ find-up@^4.0.0, find-up@^4.1.0:
   dependencies:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
+
+flatpickr@^4.6.13:
+  version "4.6.13"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.13.tgz#8a029548187fd6e0d670908471e43abe9ad18d94"
+  integrity sha512-97PMG/aywoYpB4IvbvUJi0RQi8vearvU0oov1WW3k0WZPBMrTQVqekSX5CjSG/M4Q3i6A/0FKXC7RyAoAUUSPw==
 
 flatted@^3.2.7:
   version "3.2.7"
@@ -5680,6 +5730,13 @@ shebang-regex@^3.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
+showdown@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/showdown/-/showdown-2.1.0.tgz#1251f5ed8f773f0c0c7bfc8e6fd23581f9e545c5"
+  integrity sha512-/6NVYu4U819R2pUIk79n67SYgJHWCce0a5xTP979WbNp0FL9MN1I1QK662IDU1b6JzKTvmhgI7T7JYIxBi3kMQ==
+  dependencies:
+    commander "^9.0.0"
+
 side-channel@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/side-channel/-/side-channel-1.0.4.tgz#efce5c8fdc104ee751b25c58d4290011fa5ea2cf"
@@ -6199,6 +6256,11 @@ uuid@8.3.2, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+validate-color@^2.2.1:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/validate-color/-/validate-color-2.2.4.tgz#77acf863458cd637ee944f604932512f6cbe6103"
+  integrity sha512-Znolz+b6CwW6eBXYld7MFM3O7funcdyRfjKC/X9hqYV/0VcC5LB/L45mff7m3dIn9wdGdNOAQ/fybNuD5P/HDw==
 
 validate-npm-package-license@^3.0.4:
   version "3.0.4"

@@ -1,0 +1,291 @@
+<f-div direction="column" height="100%">
+  <f-div
+    state="secondary"
+    height="30px"
+    gap="medium"
+    align="middle-left"
+    border="small solid subtle bottom"
+    padding="none medium"
+  >
+    <img src="assets/favicon.svg" alt="img" />
+    <f-text variant="heading" size="x-small" weight="regular"
+      >A Singapore Government Agency Website</f-text
+    >
+  </f-div>
+  <f-div
+    gap="auto"
+    align="middle-left"
+    border="small solid subtle bottom"
+    state="default"
+    padding="small medium"
+    height="hug-content"
+  >
+    <f-div gap="medium" align="middle-left">
+      <img src="assets/dawn.svg" alt="img" />
+      <img src="assets/csc.svg" alt="img" />
+    </f-div>
+    <f-div
+      width="hug-content"
+      gap="medium"
+      align="middle-left"
+      height="45px"
+      class="profile-options"
+    >
+      <f-pictogram
+        source="LC"
+        variant="circle"
+        size="x-large"
+        state="default"
+      ></f-pictogram>
+      <f-div direction="column" gap="x-small" height="hug-content">
+        <f-text variant="heading" size="x-small" weight="regular" state="subtle"
+          >Logged in as</f-text
+        >
+        <f-text variant="heading" size="small" weight="regular" state="subtle"
+          >Loke Chok Kang</f-text
+        >
+      </f-div>
+      <f-divider state="secondary"></f-divider>
+      <f-div height="hug-content" width="hug-content">
+        <f-icon-button
+          state="neutral"
+          icon="i-logout"
+          variant="block"
+          category="transparent"
+          size="medium"
+        ></f-icon-button>
+      </f-div>
+    </f-div>
+    <f-div
+      width="hug-content"
+      gap="medium"
+      align="middle-left"
+      height="45px"
+      class="view-more"
+    >
+      <f-icon-button
+        icon="i-more"
+        size="small"
+        variant="block"
+        category="transparent"
+        state="neutral"
+        (click)="togglePopover()"
+        id="popover-menu"
+      ></f-icon-button>
+      <f-popover
+        [open]="openPopover"
+        target="#popover-menu"
+        (overlay-click)="togglePopover()"
+        target="#popover-menu"
+        size="small"
+      >
+        <f-div direction="column">
+          <f-div
+            height="hug-content"
+            border="small solid secondary bottom"
+            state="secondary"
+            padding="medium"
+            gap="medium"
+          >
+            <f-pictogram
+              size="large"
+              variant="circle"
+              source="LC"
+            ></f-pictogram>
+            <f-div
+              direction="column"
+              gap="x-small"
+              height="hug-content"
+              align="middle-left"
+            >
+              <f-text
+                variant="para"
+                size="x-small"
+                weight="regular"
+                state="secondary"
+                >Logged in as</f-text
+              >
+              <f-text variant="para" size="medium" weight="regular"
+                >Lok Chok Kang</f-text
+              >
+            </f-div>
+          </f-div>
+
+          <f-div state="secondary" padding="medium" gap="medium" clickable>
+            <f-div
+              data-f-id="menu-list-section-left"
+              gap="medium"
+              align="middle-left"
+            >
+              <f-icon size="medium" source="i-logout"></f-icon>
+              <f-text variant="para" size="medium" weight="regular"
+                >Logout</f-text
+              >
+            </f-div>
+          </f-div>
+        </f-div>
+      </f-popover>
+    </f-div>
+  </f-div>
+  <f-div
+    overflow="hidden"
+    state="default"
+    class="left-column-hightlight"
+    [attr.data-column-open]="open"
+  >
+    <f-div overflow="scroll" state="default">
+      <f-grid max-cell-width="305">
+        <f-div
+          *ngFor="let item of gridData"
+          [key]="item.id"
+          [id]="item.id"
+          height="hug-content"
+          state="default"
+          variant="curved"
+          padding="medium"
+          gap="small"
+        >
+          <f-div direction="column" gap="medium">
+            <f-div gap="large" align="middle-left" height="60px">
+              <img [src]="item.icon" alt="img" />
+              <f-text variant="heading" size="medium" weight="medium">{{
+                item.title
+              }}</f-text>
+            </f-div>
+            <f-text variant="heading" size="x-small" weight="medium">{{
+              item.description
+            }}</f-text>
+            <f-button label="Access" variant="round" size="x-small"></f-button>
+          </f-div>
+        </f-div>
+      </f-grid>
+    </f-div>
+    <f-div
+      class="notch-right"
+      [attr.data-column-open]="open"
+      width="16px"
+      height="76px"
+      align="middle-center"
+      state="secondary"
+      clickable
+      (click)="toggleLeftcolumn()"
+      overflow="hidden"
+    >
+      <f-icon
+        source="i-notch-left"
+        size="small"
+        state="default"
+        class="notch-right-icon"
+        [attr.data-column-open]="open"
+      ></f-icon>
+    </f-div>
+    <f-div
+      [width]="open ? '320px' : '0px'"
+      [class]="open ? 'column-expanded-right' : 'column-collapsed-right'"
+      [border]="open ? 'small solid secondary left' : 'none'"
+      direction="column"
+      overflow="hidden"
+      state="default"
+    >
+      <f-tab node-width="fill">
+        <f-tab-node
+          *ngFor="let item of tabList"
+          [active]="selected === item.id ? true : false"
+          [content-id]="item.id === 0 ? 'tab-0' : 'tab-1'"
+          (click)="handleSwitchTab(item)"
+          ><f-div
+            width="100%"
+            height="100%"
+            align="middle-center"
+            direction="column"
+            ><f-div
+              align="middle-center"
+              height="hug-content"
+              width="hug-content"
+              gap="small"
+            >
+              <f-icon
+                [source]="item.icon"
+                size="medium"
+                state="default"
+              ></f-icon>
+              <f-text variant="para" size="medium" weight="medium">{{
+                item.title
+              }}</f-text></f-div
+            ></f-div
+          >
+        </f-tab-node></f-tab
+      >
+      <f-div overflow="scroll">
+        <f-tab-content id="tab-0" *ngIf="selected === 1; else templateName">
+          <f-div direction="column" width="100%" padding="large">
+            <f-div
+              *ngFor="let item of gridData"
+              border="small dashed subtle bottom"
+              padding="medium none"
+              align="middle-left"
+              clickable
+            >
+              <f-div gap="medium" align="middle-left">
+                <img [src]="item.icon" width="28px" height="28px" alt="img" />
+                <f-text variant="heading" size="small" weight="medium">{{
+                  item.title
+                }}</f-text>
+              </f-div>
+              <f-div width="hug-content" align="middle-left">
+                <f-icon-button
+                  icon="i-external-link"
+                  size="small"
+                  variant="block"
+                  category="transparent"
+                  state="neutral"
+                ></f-icon-button>
+              </f-div>
+            </f-div>
+          </f-div>
+        </f-tab-content>
+        <ng-template #templateName>
+          <f-tab-content id="tab-1">
+            <f-div direction="column" width="100%" padding="large">
+              <f-md-editor [value]="mdValue"></f-md-editor>
+            </f-div>
+          </f-tab-content>
+        </ng-template>
+      </f-div>
+    </f-div>
+  </f-div>
+  <f-div
+    state="secondary"
+    height="30px"
+    border="small solid subtle bottom"
+    class="responsive-footer"
+  >
+    <f-div
+      class="responsive-footer-menu"
+      border="small solid subtle right"
+      width="hug-content"
+      align="middle-center"
+    >
+      <f-text variant="para" size="x-small" weight="regular"
+        >© 2023 Civil Service College, Singapore</f-text
+      >
+    </f-div>
+    <f-div
+      class="responsive-footer-menu"
+      border="small solid subtle right"
+      width="hug-content"
+      align="middle-center"
+    >
+      <f-text variant="para" size="x-small" weight="regular"
+        >Report an issue</f-text
+      >
+    </f-div>
+    <f-div
+      width="hug-content"
+      align="middle-center"
+      class="responsive-footer-menu"
+    >
+      <f-text variant="para" size="x-small" weight="regular">Contact us</f-text>
+    </f-div>
+  </f-div>
+</f-div>

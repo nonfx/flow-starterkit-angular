@@ -3,15 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BodyComponent } from './BodySection/mainbody.component';
-import { LayoutComponent } from './Layout/layout.component';
-import { MenuComponent } from './MenuPopover/menu.component';
+import { HomeComponent } from './HomeComponent/home.component';
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, BodyComponent, MenuComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent, LayoutComponent, BodyComponent],
+  bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

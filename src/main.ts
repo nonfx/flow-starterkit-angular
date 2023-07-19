@@ -3,13 +3,16 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
-import '@cldcvr/flow-core';
-import '@cldcvr/flow-system-icon';
 
-if (environment.production) {
-  enableProdMode();
-}
-
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
+Promise.all([
+  import('@cldcvr/flow-core'),
+  import('@cldcvr/flow-system-icon'),
+  import('@cldcvr/flow-md-editor'),
+]).then(() => {
+  if (environment.production) {
+    enableProdMode();
+  }
+  platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .catch((err) => console.log(err));
+});

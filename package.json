@@ -18,9 +18,10 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
-    "@cldcvr/flow-core": "latest",
+    "@cldcvr/flow-core": "1.17.6",
+    "@cldcvr/flow-md-editor": "^0.0.2",
     "@cldcvr/flow-product-icon": "latest",
-    "@cldcvr/flow-system-icon": "latest",
+    "@cldcvr/flow-system-icon": "1.9.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
