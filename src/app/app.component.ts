@@ -9,10 +9,10 @@ import { ConfigUtil } from '@cldcvr/flow-core';
 export class AppComponent {
   title = 'flow-starterkit-angular';
   ngOnInit() {
-    this.themeChange('f-light');
+    this.themeChange('f-new-theme');
   }
 
-  themeChange(theme: 'f-dark' | 'f-light') {
+  themeChange(theme: 'f-dark' | 'f-light' | 'f-new-theme') {
     ConfigUtil.setConfig({ theme });
   }
 }
