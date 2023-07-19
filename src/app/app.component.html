@@ -1,5 +1,7 @@
-<f-div width="100%" height="100%" state="default">
-  <f-button label="label"></f-button>
-</f-div>
+<!-- LayoutView for top-bar and side-bar. Navigate to components/LayoutView.vue -->
+<app-layout>
+  <!-- BodySection used as a slot inside Layout, which contains the data to be displayed in body. Navigate to components/BodySection.vue -->
+  <app-body-section></app-body-section>
+</app-layout>
 
 <router-outlet></router-outlet>
