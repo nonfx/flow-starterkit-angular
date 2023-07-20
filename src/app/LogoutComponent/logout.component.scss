@@ -1,0 +1,30 @@
+.remove-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.remove-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.responsive-footer-menu {
+  padding: 0px 12px !important;
+}
+.responsive-footer {
+  justify-content: right !important;
+  align-items: center !important;
+}
+@media (max-width: 768px) {
+  .responsive-footer-menu {
+    padding: 0px 8px !important;
+  }
+  .responsive-footer {
+    justify-content: left !important;
+    align-items: center !important;
+  }
+  .logout-box {
+    width: 90% !important;
+  }
+}
+
+.logout-box {
+  box-shadow: 0px 0px 12px 0px #232e3c !important;
+}

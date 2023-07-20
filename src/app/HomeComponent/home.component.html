@@ -47,13 +47,15 @@
       </f-div>
       <f-divider state="subtle"></f-divider>
       <f-div height="hug-content" width="hug-content">
-        <f-icon-button
-          state="primary"
-          icon="i-logout"
-          variant="block"
-          category="transparent"
-          size="medium"
-        ></f-icon-button>
+        <a routerLink="/logout">
+          <f-icon-button
+            state="primary"
+            icon="i-logout"
+            variant="block"
+            category="transparent"
+            size="medium"
+          ></f-icon-button>
+        </a>
       </f-div>
     </f-div>
     <f-div
@@ -110,19 +112,20 @@
               >
             </f-div>
           </f-div>
-
-          <f-div state="secondary" padding="medium" gap="medium" clickable>
-            <f-div
-              data-f-id="menu-list-section-left"
-              gap="medium"
-              align="middle-left"
-            >
-              <f-icon size="medium" source="i-logout"></f-icon>
-              <f-text variant="para" size="medium" weight="regular"
-                >Logout</f-text
+          <a routerLink="/logout">
+            <f-div state="secondary" padding="medium" gap="medium" clickable>
+              <f-div
+                data-f-id="menu-list-section-left"
+                gap="medium"
+                align="middle-left"
               >
+                <f-icon size="medium" source="i-logout"></f-icon>
+                <f-text variant="para" size="medium" weight="regular"
+                  >Logout</f-text
+                >
+              </f-div>
             </f-div>
-          </f-div>
+          </a>
         </f-div>
       </f-popover>
     </f-div>
