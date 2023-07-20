@@ -250,3 +250,7 @@
   --color-border-default-hover: #{getHover($color-border-default)};
   --color-border-default-selected: #{getSelected($color-border-default)};
 }
+
+f-md-editor .markdown-body h1 {
+  color: var(--color-primary-default);
+}

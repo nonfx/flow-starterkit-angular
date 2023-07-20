@@ -1207,10 +1207,10 @@
     rxjs "^7.5.7"
     validate-color "^2.2.1"
 
-"@cldcvr/flow-md-editor@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@cldcvr/flow-md-editor/-/flow-md-editor-0.0.2.tgz#e300381e94b7d941fcf345979ae9697174fd2467"
-  integrity sha512-VkEiwvEaVnox00cbQRuKKSeuV81zfNAWRX3FyfxdNoJ7VcqfWtDYWZh4Q15Njw9WW+VvD18FkDDViDoYATiVuQ==
+"@cldcvr/flow-md-editor@^1.0.0":
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/cldcvrdevusa/_packaging/FlowLibraryFeed/npm/registry/@cldcvr/flow-md-editor/-/flow-md-editor-1.0.0.tgz#f99f06ff6ed0f5d9bd32f3fab3030c6915430987"
+  integrity sha1-+Z8G/27Q9dm9MvP6swMMaRVDCYc=
   dependencies:
     lit "^2.2.4"
     showdown "^2.1.0"

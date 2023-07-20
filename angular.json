@@ -24,7 +24,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss", "@cldcvr/flow-core/dist/style.css"],
+            "styles": [
+              "src/styles.scss",
+              "@cldcvr/flow-core/dist/style.css",
+              "@cldcvr/flow-md-editor/dist/style.css"
+            ],
             "scripts": []
           },
           "configurations": {
