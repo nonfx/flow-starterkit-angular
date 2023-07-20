@@ -41,14 +41,14 @@
         <f-text variant="heading" size="x-small" weight="regular" state="subtle"
           >Logged in as</f-text
         >
-        <f-text variant="heading" size="small" weight="regular" state="subtle"
+        <f-text variant="heading" size="small" weight="regular" state="default"
           >Loke Chok Kang</f-text
         >
       </f-div>
-      <f-divider state="secondary"></f-divider>
+      <f-divider state="subtle"></f-divider>
       <f-div height="hug-content" width="hug-content">
         <f-icon-button
-          state="neutral"
+          state="primary"
           icon="i-logout"
           variant="block"
           category="transparent"
@@ -68,7 +68,7 @@
         size="small"
         variant="block"
         category="transparent"
-        state="neutral"
+        state="primary"
         (click)="togglePopover()"
         id="popover-menu"
       ></f-icon-button>
@@ -155,7 +155,12 @@
             <f-text variant="heading" size="x-small" weight="medium">{{
               item.description
             }}</f-text>
-            <f-button label="Access" variant="round" size="x-small"></f-button>
+            <f-button
+              label="Access"
+              variant="round"
+              size="x-small"
+              icon-right="i-arrow-right"
+            ></f-button>
           </f-div>
         </f-div>
       </f-grid>
@@ -238,7 +243,7 @@
                   size="small"
                   variant="block"
                   category="transparent"
-                  state="neutral"
+                  state="primary"
                 ></f-icon-button>
               </f-div>
             </f-div>
@@ -277,7 +282,7 @@
       align="middle-center"
     >
       <f-text variant="para" size="x-small" weight="regular"
-        >Report an issue</f-text
+        ><a href="#">Report an issue</a></f-text
       >
     </f-div>
     <f-div
@@ -285,7 +290,9 @@
       align="middle-center"
       class="responsive-footer-menu"
     >
-      <f-text variant="para" size="x-small" weight="regular">Contact us</f-text>
+      <f-text variant="para" size="x-small" weight="regular"
+        ><a href="#">Contact us</a></f-text
+      >
     </f-div>
   </f-div>
 </f-div>
