@@ -14,7 +14,7 @@ Description or details of the event can be in paragraph from and show up here. D
 - - -
 
 # This is a title for that wraps the announcement
-# Date of the event • Category
+## Date of the event • Category
 
 Description or details of the event can be in paragraph from and show up here. Description or details of the event can be in paragraph from and show up here.
 
